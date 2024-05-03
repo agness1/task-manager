@@ -1,0 +1,129 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    font-family: sans-serif;
+    max-width: 100vw;
+    display: flex;
+    padding: 4rem;
+    align-items: center;
+    background-color: #2d6a4f;
+    justify-content: space-between;
+}
+
+.form-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    height: 100%;
+    width: 30%;
+    background-color: #52b788c9;
+    padding: 1rem;
+    border-radius: 2rem;
+}
+.form-container input {
+    height: 3rem;
+}
+.form-container input, textarea {
+    width: 90%;
+    border-radius: 1rem;
+    border: none;
+}
+
+.form-container label {
+    font-size: 1.5rem;
+}
+
+.form-btn {
+    padding: 1rem;
+    padding-inline: 4rem;
+    background-color: #2d6a4f;
+    border: none;
+    border-radius: 1rem;
+    color: white;
+    font-size: 1rem;
+    font-weight: bold;
+    transition: all 0.2s ease;
+}
+.form-btn:hover, .task-btn:hover {
+    background-color: #b7e4c7;
+    color: black;
+    cursor: pointer;
+}
+
+.task-container {
+    height: 100%;
+    width: 60%;
+    background-color: #1b4332ad;
+    display: flex;
+    gap: 2rem;
+    flex-direction: column;
+    padding: 2rem;
+    border-radius: 2rem;
+    overflow-y: scroll;
+}
+.taskList-container {
+display: flex;
+align-items: center;
+justify-content: space-between;
+gap: 2rem;
+}
+.task {
+    display: flex;
+    align-items: center;
+    justify-content:space-between;
+    gap: 1rem;
+    background-color: white;
+    padding: 1rem;
+    width: 80%;
+    border-radius: 1rem;
+}
+.task-btn {
+    padding: 0.7rem;
+    padding-inline: 1rem;
+}
+
+.task-description {
+    width: 10rem;
+    text-align: center;
+    word-wrap: break-word;
+}
+
+
+ .task-btn {
+    background-color: #52b7887e;
+    padding: 1rem;
+    color: white;
+    font-weight: bold;
+    font-size: 1rem;
+    text-transform: uppercase;
+    border-radius: 1rem;
+    border:none;
+    transition: all 0.2s ease;
+}
+
+@media only screen and (max-width: 600px) {
+
+    body {
+flex-direction: column;
+padding: 1.3rem;
+gap: 2rem;
+height: auto;
+
+    }
+.form-container, .task-container {
+    width: 100%;
+}
+.taskList-container, .task {
+    flex-direction: column;
+}
+.form-container {
+    gap: 2rem;
+}
+
+}
