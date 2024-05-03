@@ -28,6 +28,7 @@ body {
 }
 .form-container input {
     height: 3rem;
+    padding: 1rem;
 }
 .form-container input, textarea {
     width: 90%;
@@ -105,6 +106,12 @@ gap: 2rem;
     border-radius: 1rem;
     border:none;
     transition: all 0.2s ease;
+}
+
+small {
+   color: maroon;
+   font-size: 0.9rem;
+   font-weight: bold
 }
 
 @media only screen and (max-width: 600px) {

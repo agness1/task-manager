@@ -2,6 +2,7 @@ const buttonForm = document.querySelector(".form-btn");
 const buttonPdf = document.querySelector(".generate-pdf");
 const buttonDelete = document.getElementsByClassName("delete-btn");
 const form = document.querySelector("#taskInfo");
+const formAlert = document.querySelector("small")
 
 const deleteTask = async (task) => {
   const response = await fetch("http://localhost:8000/delete-task", {
@@ -75,8 +76,20 @@ async function renderTasks() {
 
 document.addEventListener("DOMContentLoaded", renderTasks);
 
+
+const validation = () => {
+  return formAlert.innerHTML = "Please fill out all fields: title, deadline, and description."
+}
+
 async function sendData() {
   const formData = new FormData(form);
+  const title = formData.get("title");
+  const deadline = formData.get("deadline");
+  const description = formData.get("description");
+  if (!title || !deadline || !description) {
+    validation()
+    return;
+  }
   try {
     const response = await fetch("http://localhost:8000/task", {
       method: "POST",

@@ -18,6 +18,7 @@
         <label for="description">Description</label>
         <textarea name="description" id="description" cols="30" rows="5"></textarea>
         <button class="form-btn" type="submit">Send</button>
+        <small></small>
         </form>
         <div class="task-container" id="tasks-container">
       
