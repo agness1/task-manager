@@ -3,10 +3,6 @@
 require_once '../vendor/autoload.php';
 
 use App\Routing\Application;
-use App\Controllers\ShowTaskController;
-use App\Controllers\CreateTaskController;
-use App\Controllers\DeleteTaskController;
-use App\Controllers\CreatePdfTaskController;
 use App\Controllers\TaskController;
 
 $dotenv = Dotenv\Dotenv::createImmutable(dirname(__DIR__));
